@@ -248,11 +248,11 @@ function MM_goToURL() { //v3.0
 
 <table width="1202" border="0" align="center" cellpadding="0" cellspacing="0"  background="img/top-b.jpg" class="menu-1 ff2">
   <tr>
-    <td width="424" rowspan="2"><a href="index-2.html"><img src="../img/logo1.png" border="0" class="logoA"></a></td>
+    <td width="424" rowspan="2"><a href="index.html"><img src="../img/logo1.png" border="0" class="logoA"></a></td>
     <td width="626">&nbsp;</td>
-    <td width="80" valign="top" class="fc10"><a href="index-2.html" target="_parent"><br>
+    <td width="80" valign="top" class="fc10"><a href="index.html" target="_parent"><br>
     HOME</a></td>
-    <td width="72" valign="top" class="fc10"><a href="../index-2.html" target="_parent"><br>
+    <td width="72" valign="top" class="fc10"><a href="../index.html" target="_parent"><br>
     繁體中文</a></td>
   </tr>
   <tr>
