@@ -1,0 +1,141 @@
+<!--
+        /* menu 座標*/
+        
+        #apDiv1 {
+            position: absolute;
+            right: 20%;
+            top: 70px;
+            height: 34px;
+            z-index: 1;
+        }
+        
+        .logoA {
+            width: 380px;
+        }
+        
+        -->
+        a img {
+            border: none;
+        }
+        
+        #Banners_pic {
+            position: relative;
+            border: 1px solid #ccc;
+        }
+        
+        #Banners_pic a.ad {
+            position: absolute;
+            /* 讓圖片疊在一起 */
+        }
+        
+        #Banners_pic .control {
+            position: absolute;
+            right: 5px;
+            bottom: 5px;
+        }
+        
+        #Banners_pic .control a {
+            display: inline-block;
+            padding: 0px;
+            margin: 0 0px;
+            width: 0px;
+            color: #fff;
+            background: #FFF;
+            text-align: center;
+            font-size: 0px;
+            text-decoration: none;
+        }
+        
+        #Banners_pic .control a.on {
+            font-weight: bold;
+            color: #f00;
+        }
+
+<!-- apDiv1 {
+            margin: 0px auto;
+        }
+        
+        .menuA1 {
+            position: relative;
+            width: 600px;
+            height: 35px;
+            left: 0px;
+            margin: 10px 0px 10px 0px;
+            border-top-width: 0px;
+            border-right-width: 0px;
+            border-bottom-width: 0px;
+            border-left-width: 0px;
+            border-style: solid;
+            border-color: #fff;
+            border-radius: 5px;
+        }
+        
+        .menuB {
+            position: relative;
+            float: left;
+            width: 100px;
+            height: 35px;
+            text-align: center;
+            margin: 0px 0px 0px 10px;
+            padding: 0px;
+            color: #000;
+            line-height: 35px;
+            border-radius: 5px;
+            background-color: #7B9BCA;
+            border: 1px double #92ACD3;
+        }
+        
+        a:hover .menuB {
+            position: relative;
+            float: left;
+            width: 100px;
+            height: 35px;
+            text-align: center;
+            margin: 0px 0px 0px 10px;
+            padding: 0px;
+            background-color: #003366;
+            color: #FFF;
+            line-height: 35px;
+            border-radius: 5px;
+        }
+        
+        .menuB1 {
+            font-size: 16px;
+        }
+        
+        .menuB2 {
+            font-size: 16px;
+        }
+        
+        .menuC {
+            position: relative;
+            height: 0px;
+            width: 0px;
+            font-size: 0px;
+            border-radius: 5px;
+        }
+        
+        a:hover .menuC {
+            position: relative;
+            width: 100px;
+            height: auto;
+            padding: 0px;
+            border: 1px double #003366;
+            font-size: 16px;
+            background-color: #99bbff;
+            z-index: 51;
+            left: 0%;
+            border-radius: 5px;
+        }
+        
+        .fc10 a:link {
+            color: #fff;
+        }
+        
+        .fc10 a:hover {
+            color: #fff;
+        }
+        
+        .fc10 a:visited {
+            color: #fff;
+        }

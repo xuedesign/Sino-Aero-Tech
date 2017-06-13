@@ -1,0 +1,125 @@
+@charset "utf-8";
+@import url(https://fonts.googleapis.com/css?family=Architects+Daughter);
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+
+/* CSS Document */
+.ff1 {font-family: "Times New Roman";}
+.ff2 {font-family: "微軟正黑體" ;}
+.ff3 {font-family: 'Architects Daughter','Meiryo';}
+.ff4 {font-family: 'Poiret One','Meiryo';}
+.ff5 {font-family: 'Lobster','Meiryo'}
+.fa1 {text-align: center;}
+.fa11 {text-align: left;}
+.fa12 {text-align: right;}
+.fa2 {margin:0px auto;}
+
+.bo {border: 1px solid #999999;}
+
+.fb1 {font-weight: bold;}
+.fb2 {font-weight: bolder;}
+.fb3 {text-shadow: 3px 1px #444;}
+
+a:link {color: #7B5315;}
+a:hover {color: #7B5315;}
+a:visited {color: ##7B5315;}
+
+.fc1 {color: #000;}
+.fc2 {color: #7B5315;}
+.fc3 {color: #CC0000;}
+.fc4 {color: #FF9900;}
+.fc5 {color: #FFFF00;}
+.fc6 {color: #559540;}
+.fc7 {color: #336699;}
+.fc8 {color: #663399;}
+.fc9 {color: #777;}
+.fc10 {color: #fff;}
+
+.fe1 {background-color: #000;}
+.fe2 {background-color: #CC9900;}
+.fe3 {background-color: #CC0000;}
+.fe4 {background-color: #FF9900;}
+.fe5 {background-color: #FFFF00;}
+.fe6 {background-color: #339900;}
+.fe7 {background-color: #336699;}
+.fe8 {background-color: #663399;}
+.fe9 {background-color: #aaa;}
+.fe10 {background-color: #fff;}
+.fee2 {background-color: #CC0000;}
+.fee3 {background-color: #FF9900;}
+.fee4 {background-color: #339900;}
+.fee5 {background-color: #663399;}
+.fee6 {background-color: #aaa;}
+.f-w {
+	-webkit-box-shadow: #111 1px 3px 8px;
+	-moz-box-shadow: #111 1px 3px 8px;
+ 	box-shadow: #111 1px 3px 8px;
+}
+
+a {
+	text-decoration: none;
+}
+
+.fimg {
+  border-radius: 100px;
+}
+.ffPW { background: center url(../images/service-1.html);}
+
+/* 電腦版 */
+.DD {
+	border: 1px solid #999999;
+	border-radius: 8px;
+}
+.Db {border: 3px solid #ccc;}
+
+.Dp {padding: 5px;}
+.Dp1 {padding: 30px;}
+.Dm {margin: 5px;} 
+.Dm1 {margin: 30px;}
+
+.Divleft {float: left;}
+
+.Divright {float: right;}
+
+.fd0 {
+	font-size: 120px;
+	line-height: 200px;
+}
+
+.fd01 {
+	font-size: 60px;
+	line-height: 80px;
+}
+
+.fd1 {
+	font-size: 40px;
+	line-height: 50px;
+}
+
+.fd2 {
+	font-size: 24px;
+	line-height: 35px;
+}
+
+.fd21 {
+	font-size: 30px;
+	line-height: 45px;
+}
+
+.fd3 {
+	font-size: 18px;
+	line-height: 28px;
+}
+.fd31 {
+	font-size: 16px;
+	line-height: 30px;
+}
+.fd32 {
+	font-size: 30px;
+	line-height: 32px;
+}
+
+.fd4 {
+	font-size: 12px;
+	line-height: 20px;
+}

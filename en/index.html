@@ -1,0 +1,343 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from gcn.tw/sino/en/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 07 Jun 2017 07:20:11 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>華夏航太 </title>
+<link href="img/icon-1.png" rel="icon"/>
+<link href="css/css1.css" rel="stylesheet" type="text/css" />
+<link href="css/cssf.css" rel="stylesheet" type="text/css" />
+<link href="css/animate.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="css/ShowSpeed.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.4.2.min.js"></script>
+
+<style type="text/css">
+<!--
+/* menu 座標 */
+#apDiv1 {
+	position:absolute;
+	right:20%;
+	top:70px;
+	height:34px;
+	z-index:1;
+}
+
+.logoA {
+	width:380px;
+}
+
+-->
+
+	a img {
+		border: none;
+	}
+	#Banners_pic {
+		position: relative;
+		border: 1px solid #ccc;
+	}
+	#Banners_pic a.ad {
+		position: absolute;	/* 讓圖片疊在一起 */
+	}
+	#Banners_pic .control {
+		position: absolute;
+		right: 5px;
+		bottom: 5px;
+	}
+	#Banners_pic .control a {
+		display: inline-block;
+		padding: 0px;
+		margin: 0 0px;
+		width: 0px;
+		color: #fff;
+		background: #FFF;
+		text-align: center;
+		font-size: 0px;
+		text-decoration: none;
+	}
+	#Banners_pic .control a.on {
+		font-weight: bold;
+		color: #f00;
+	}
+
+</style>
+
+<script type="text/javascript">
+$(function(){
+	var $block = $('#Banners_pic'), 
+		$ad = $block.find('.ad'),
+		showIndex = 0,			// 預設要先顯示那一張
+		fadeOutSpeed = 350,	// 淡出的速度
+		fadeInSpeed = 300,		// 淡入的速度
+		defaultZ = 5,			// 預設的 z-index
+		isHover = false,
+		timer, speed = 1;	// 計時器及輪播切換的速度
+ 
+	// 先把其它圖片的變成透明
+	$ad.css({
+		opacity: 0,
+		zIndex: defaultZ - 1
+	}).eq(showIndex).css({
+		opacity: 1,
+		zIndex: defaultZ
+	});
+ 
+	// 組出右下的按鈕
+	var str = '';
+	for(var i=0;i<$ad.length;i++){
+		str += '<a href="#">' + (i + 1) + '</a>';
+	}
+	var $controlA = $('#Banners_pic').append($('<div class="control">' + str + '</div>').css('zIndex', defaultZ + 1)).find('.control a');
+	SetColor();
+	$controlA.eq(0).css({color: '#FFFFFF'});
+	// 當按鈕被點選時
+	// 若要變成滑鼠滑入來切換時, 可以把 click 換成 mouseover
+	$controlA.click(function(){
+		// 取得目前點擊的號碼
+		SetColor();
+		showIndex = $(this).text() * 1 - 1;
+		$controlA.eq(showIndex).css({color: '#FFFFFF'});
+		// 顯示相對應的區域並把其它區域變成透明
+		$ad.eq(showIndex).stop().fadeTo(fadeInSpeed, 1, function(){
+			if(!isHover){
+				// 啟動計時器
+				timer = setTimeout(autoClick, speed + fadeInSpeed);
+			}
+		}).css('zIndex', defaultZ).siblings('a').stop().fadeTo(fadeOutSpeed, 0).css('zIndex', defaultZ - 1);
+		// 讓 a 加上 .on
+		$(this).addClass('on').siblings().removeClass('on');
+ 
+		return false;
+	}).focus(function(){
+		$(this).blur();
+	}).eq(showIndex).addClass('on');
+ 
+	$ad.hover(function(){
+		isHover = true;
+		// 停止計時器
+		clearTimeout(timer);
+	}, function(){
+		isHover = false;
+		// 啟動計時器
+		timer = setTimeout(autoClick, speed);
+	})
+ 
+	// 自動點擊下一個
+	function autoClick(){
+		if(isHover) return;
+		showIndex = (showIndex + 1) % $controlA.length;
+		$controlA.eq(showIndex).click();
+	}
+ 
+	// 啟動計時器
+	timer = setTimeout(autoClick, speed);
+	
+	function SetColor(){
+		$controlA.eq(0).css({color: '#622524'});
+		$controlA.eq(1).css({color: '#622524'});
+		$controlA.eq(2).css({color: '#622524'});
+		$controlA.eq(3).css({color: '#622524'});
+		$controlA.eq(4).css({color: '#622524'});
+	}
+	
+
+});
+</script>
+
+
+</head>
+<body>
+
+<style type="text/css">
+<!--
+apDiv1 {margin: 0px auto;}
+
+
+.menuA1 {
+	position:relative;
+	width: 600px;
+	height: 35px;
+	left: 0px;
+	margin: 10px 0px 10px 0px;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-style: solid;
+	border-color: #fff;
+	border-radius: 5px;
+}
+
+.menuB {
+	position:relative;
+	float: left;
+	width: 100px;
+	height: 35px;
+	text-align: center;
+	margin: 0px 0px 0px 10px;
+	padding: 0px;
+	color: #000;
+	line-height: 35px;
+	border-radius: 5px;
+	background-color: #7B9BCA;
+	border: 1px double #92ACD3;
+}
+
+a:hover .menuB {
+	position:relative;
+	float: left;
+	width: 100px;
+	height: 35px;
+	text-align: center;
+	margin: 0px 0px 0px 10px;
+	padding: 0px;
+	background-color: #003366;
+	color: #FFF;
+	line-height: 35px;
+	border-radius: 5px;
+}
+
+.menuB1 {
+	font-size: 16px;
+}
+
+.menuB2 {
+	font-size: 16px;
+}
+
+.menuC {
+	position:relative;
+	height: 0px;
+	width: 0px;
+	font-size: 0px;
+	border-radius: 5px;
+}
+
+a:hover .menuC {
+	position:relative;
+	width: 100px;
+	height: auto;
+	padding: 0px;
+	border: 1px double #003366;
+	font-size: 16px;
+	background-color: #99bbff;
+	z-index: 51;
+	left: 0%;
+	border-radius: 5px;
+}
+
+.fc10 a:link {color: #fff;}
+.fc10 a:hover {color: #fff;}
+.fc10 a:visited {color: #fff;}
+
+-->
+</style>
+
+<script type="text/javascript">
+<!--
+function MM_goToURL() { //v3.0
+  var i, args=MM_goToURL.arguments; document.MM_returnValue = false;
+  for (i=0; i<(args.length-1); i+=2) eval(args[i]+".location='"+args[i+1]+"'");
+}
+//-->
+</script>
+
+</head>
+<body>
+
+
+<table width="1202" border="0" align="center" cellpadding="0" cellspacing="0"  background="img/top-b.jpg" class="menu-1 ff2">
+  <tr>
+    <td width="424" rowspan="2"><a href="index-2.html"><img src="../img/logo1.png" border="0" class="logoA"></a></td>
+    <td width="626">&nbsp;</td>
+    <td width="80" valign="top" class="fc10"><a href="index.html" target="_parent"><br>
+    HOME</a></td>
+    <td width="72" valign="top" class="fc10"><a href="../index.html" target="_parent"><br>
+    繁體中文</a></td>
+  </tr>
+  <tr>
+    <td colspan="3">
+    <table height="31" border="0" align="center" cellpadding="0" cellspacing="0">
+    <tr>
+      <td align="center">
+<div class="menuA1"> 
+  <a href="layout2161.html?Id=1"><div class="menuB"><span class="animated fadeIn menuB1">About </span></div></a> 
+
+	<a href="#">
+	<div class="menuB">
+	<span class="animated fadeIn menuB1">Products</span>
+  	<div class="menuC fc1 animated fadeIn"  onclick="MM_goToURL('parent','layout8d16.html?Id=21');return document.MM_returnValue">Light Sport Aircraft </div>
+  	<div class="menuC fc1 animated fadeIn"  onclick="MM_goToURL('parent','layout5e53.html?Id=22');return document.MM_returnValue">Aerospace LED Lights</div>
+  	<div class="menuC fc1 animated fadeIn"  onclick="MM_goToURL('parent','layout50dc.html?Id=23');return document.MM_returnValue">ODM/OEM</div>
+	</div>
+	</a> 
+
+
+      <a href="layoute211.html?Id=News"><div class="menuB"><span class="animated fadeIn menuB1">NEWS</span></div></a>
+      <!--<a href="layout.php?Id=4"><div class="menuB"><span class="animated fadeIn menuB1">Download</span></div></a>-->
+      <a href="layouta0d7.html?Id=8"><div class="menuB"><span class="animated fadeIn menuB1">Contactus</span></div></a>
+</div>
+
+
+
+      </td>
+    </tr>
+  </table>
+
+    </td>
+  </tr>
+</table>
+
+
+
+
+
+
+
+
+
+<table width="1200" height="465" border="0" align="center" cellpadding="0" cellspacing="0" background="img/bas-1.jpg">
+<tr>
+  <td valign="top">
+
+<div id="Banners_pic">
+            		  <a class="ad"><img src="../admin/home_photo/1470901892_.jpg" width="100%" border="0" /></a>
+            		  <a class="ad"><img src="../admin/home_photo/1470901898_.jpg" width="100%" border="0" /></a>
+            		  <a class="ad"><img src="../admin/home_photo/1470901902_.jpg" width="100%" border="0" /></a>
+            		  <a class="ad"><img src="../admin/home_photo/1470901908_.jpg" width="100%" border="0" /></a>
+            		  <a class="ad"><img src="../admin/home_photo/1470901914_.jpg" width="100%" border="0" /></a>
+            		  <a class="ad"><img src="../admin/home_photo/1470901919_.jpg" width="100%" border="0" /></a>
+            		  <a class="ad"><img src="../admin/home_photo/1470901924_.jpg" width="100%" border="0" /></a>
+            		  <a class="ad"><img src="../admin/home_photo/1470901928_.jpg" width="100%" border="0" /></a>
+            		  <a class="ad"><img src="../admin/home_photo/1470901933_.jpg" width="100%" border="0" /></a>
+            		  <a class="ad"><img src="../admin/home_photo/1470901937_.jpg" width="100%" border="0" /></a>
+            		  <a class="ad"><img src="../admin/home_photo/1470901941_.jpg" width="100%" border="0" /></a>
+            		  <a class="ad"><img src="../admin/home_photo/1470901947_.jpg" width="100%" border="0" /></a>
+            	</div>
+
+  </td>
+</tr>
+</table>
+<script language="JavaScript" type="text/JavaScript">runSlideShow()</script>
+
+<table width="1200" height="133" border="0" align="center" cellpadding="0" background="img/footer-b.jpg" cellspacing="0" >
+  <tr>
+    <td>
+<table width="700" height="95" border="0" align="center" cellpadding="0" cellspacing="0" class="ff2 fc10" >
+      <tr>
+        <td width="96" align="center"><p>&nbsp;</p>
+          <p align="center">&nbsp;</p></td>
+        <td width="510" align="center">2017 © SINO AEROTECH <br />
+          WELLTECH TECHNOLOGY CO., LTD.<br>
+          CopyRight ©2016 All Rights Reserved<br></td>
+        <td width="94"><img src="../img/QR.png" width="88" height="88" /></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+
+
+</body>
+
+<!-- Mirrored from gcn.tw/sino/en/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 07 Jun 2017 07:20:16 GMT -->
+</html>
